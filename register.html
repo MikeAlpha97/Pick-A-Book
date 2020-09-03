@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/carousel.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .form-signup {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+      }
+      .form-signup .checkbox {
+        font-weight: 400;
+      }
+      .form-signup .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .form-signup .form-control:focus {
+        z-index: 2;
+      }
+      .form-signup input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-signup input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .image-preview-input {
+        position: relative;
+        overflow: hidden;
+        margin: 0px;
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+      }
+      .image-preview-input input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+      .image-preview-input-title {
+        margin-left: 2px;
+      }
+    </style>
+    <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            $("#image-preview").attr("src", e.target.result);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+    <title>Register</title>
+  </head>
+  <body
+    style="background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  "
+  >
+    <section class="login-header align-middle">
+      <div class="container text-center">
+        <form class="form-signup">
+          <a href="index.html"
+            ><img class="mb-4" src="images/logo.png" alt=""
+          /></a>
+          <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input
+            type="name"
+            id="inputNmae"
+            class="form-control form-bar"
+            placeholder="name"
+            required
+            autofocus
+          />
+          <input
+            type="email"
+            id="inputEmail"
+            class="form-control form-bar"
+            placeholder="Email address"
+            required
+            autofocus
+          />
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control form-bar"
+            placeholder="Password"
+            required
+          />
+          <select class="form-control form-bar">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+          <img
+            id="image-preview"
+            style="max-width:100%;border:2px solid #000000;"
+          />
+          <input type="file" onchange="readURL(this);" />
+          <textarea
+            class="form-control form-bar"
+            id="exampleFormControlTextarea1"
+            placeholder="Tell us a bit about yourself"
+            rows="8"
+          ></textarea>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Sign in
+          </button>
+          <p class="mt-5 mb-3">&copy; 2017-2019</p>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
